@@ -1,0 +1,24 @@
+//- arProp - объект 
+
+
+mixin c-select(arProp)
+    - var wrapClass = arProp.type === 'checkbox' ? 'c-select__check' : type === 'radio' ? 'c-select__radio' : ''
+
+    .c-select
+        .c-select__head(title=arProp.title)
+            span.c-select__label 
+                | !{arProp.title}
+            svg.c-select__head-icon 
+                use(xlink:href="img/sprite.svg#angle-down")
+                
+        .c-select__body 
+            each item in arProp.list
+                label.c-check(class=wrapClass)
+                    if (arProp.type === 'radio')
+                        input.c-check__input(type="radio", name=arProp.name, value=item)
+                        span.c-check__label.c-check__label--radio 
+                            | !{item}
+                    else
+                        input.c-check__input(type="checkbox", name=item.name, value=item.value, data-value=item.data_value)
+                        span.c-check__label.c-check__label--checkbox
+                            | !{item.title}

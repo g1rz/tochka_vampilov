@@ -1,0 +1,45 @@
+//- menu - объект пунктов меню 
+//- Пример:
+//- [
+        {
+        classMenu - класс меню
+        classMenuItem - класс пункта меню
+        classMenuLink - класс ссылки меню
+        items - массив пунктов меню:
+            {
+                name - имя пункта,
+                link - ссылка меню
+                classItem - класс элемента
+                classLink - класс ссылки
+                subMenu - подменю,
+                innerElement - элемент внутри ссылки
+            }
+        }
+        
+//- ]
+
+mixin menu(menu)
+    - var classMenu = menu.classMenu ? menu.classMenu : ''
+    - var classMenuItem = menu.classMenuItem ? menu.classMenuItem : ''
+    - var classMenuLink = menu.classMenuLink ? menu.classMenuLink : ''
+    ul(class=classMenu)
+        each item in menu.items 
+            - var link = item.link ? item.link : '#'
+            - var classLink = item.classLink ? item.classLink : classMenuLink
+            - var classItem = item.classItem ? item.classItem : classMenuItem
+            li(class=classItem)
+                if (item.isButton)
+                    button.mobile-menu__back
+                        | !{item.name}
+                else
+                    a(class=classLink, href=link) 
+                        if (item.innerElement)
+                            span
+                                | !{item.innerElement}
+                                | !{item.name}
+                        else 
+                            | !{item.name}
+                    if (item.elementAfter)
+                        | !{item.elementAfter}
+                    if (item.subMenu)
+                        +menu(item.subMenu)

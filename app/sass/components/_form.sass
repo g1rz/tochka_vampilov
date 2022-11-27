@@ -1,0 +1,76 @@
+
+    
+.f-group
+    margin-bottom: 10px
+
+.f-input, .f-textarea 
+    display: block 
+    width: 100%
+    padding: 10px 12px
+    border: 1px solid grayLight 
+    font-weight: 400
+    font-size: 15px
+    line-height: 18px
+    background: #fff
+    &::placeholder 
+        color: gray
+    &:hover 
+        border-color: gray
+    &:focus 
+        border-color: red
+
+.f-textarea 
+    height: 120px
+
+.check 
+    position: relative
+    &__input 
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -9999
+        opacity: 0
+        &:checked + .check__label::after 
+            display: block
+        &:focus + .check__label
+            &::before 
+                border-color: red
+            // &::after 
+                // box-shadow: 0px 0px 16px rgba(3, 217, 68, 0.5)
+    &__label
+        position: relative
+        display: block
+        padding-left: 28px 
+        font-size: 15px
+        line-height: 18px
+        color: gray
+        cursor: pointer
+        &::before, &::after
+            content: ''
+            position: absolute
+            top: -2px
+            left: 0
+            width: 20px
+            height: 20px 
+            border: 1px solid grayLight
+            border-radius: 4px
+        
+        &::after
+            display: none
+            background: red url('../img/sprite.svg#check') no-repeat center
+            background-size: 10px 10px
+            border-color: red
+        a 
+            color: inherit 
+            text-decoration: underline
+            &:hover 
+                text-decoration: none
+
+@media (max-width: 768px)
+    .f-input, .f-textarea
+        font-size: 16px
+        line-height: 20px
+        padding-bottom: 10px 
+
+    .f-textarea 
+        height: 100px

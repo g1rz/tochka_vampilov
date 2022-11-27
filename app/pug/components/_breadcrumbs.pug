@@ -1,0 +1,12 @@
+//- list - массив списка названий хлебных крошек
+
+mixin breadcrumbs(list) 
+    .breadcrumbs 
+        .container
+            ul.breadcrumbs-list     
+                each item, index in list 
+                    li 
+                        if (list.length - 1 === index)
+                            span !{item}
+                        else 
+                            a(href="#") !{item}

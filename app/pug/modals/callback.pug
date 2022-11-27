@@ -1,0 +1,26 @@
+.modal.mfp-hide#callback 
+
+    p.modal__title 
+        | Обратная связь
+    form.form 
+        input(type="hidden", name="act", value="callback")
+        
+        .f-group
+            input.f-input(placeholder="Имя", name="user_name")
+ 
+        .f-group 
+            input.f-input.phone-mask(placeholder="Телефон*", name="user_phone", required)
+            
+        .f-group 
+            textarea.f-textarea(placeholder="Комментарий", name="user_comment")
+
+        
+        .f-group 
+            label.check 
+                input.check__input(type="checkbox", name="pdn", id="pdn_m", required)
+                span.check__label
+                    | Я соглашаюсь на обработку моих 
+                    | #[a(href="#") персональных данных] 
+    
+        button.btn.btn--active.btn--block(type="submit")
+            | Отправить
