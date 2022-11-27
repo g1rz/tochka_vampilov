@@ -1,0 +1,30 @@
+.langs-toggle 
+    position: absolute 
+    top: 0
+    left: 0
+    display: flex 
+    flex-wrap: wrap 
+    &__link 
+        position: relative
+        display: block 
+        padding: 8px 10px
+        min-width: 52px
+        font-size: 14px
+        line-height: 16px
+        letter-spacing: -0.02em
+        color: #fff
+        background: #746B60
+        text-align: center
+
+        &.is-active 
+            background: #fff 
+            color: #000
+            &::after 
+                content: ''
+                position: absolute
+                top: 100%    
+                left: 0
+                border-top: 5px solid #fff
+                border-right: 5px solid transparent
+                border-bottom: 5px solid transparent
+                border-left: 5px solid #fff

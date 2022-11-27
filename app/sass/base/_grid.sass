@@ -1,7 +1,7 @@
 @use "sass:math"
 
 .container
-    max-width: 1200px
+    max-width: 1375px
     margin: 0 auto
     padding: 0 15px
     // position: relative
@@ -23,113 +23,113 @@
 
 @media (min-width: 1200px) 
   .container
-    max-width: 1210px
+    max-width: 1375px
 
 
-.row-n
-    display: flex
-    margin-left: -10px
-    margin-right: -10px
-    flex-wrap: wrap
-    &--m 
-        margin-left: 0
-        margin-right: 0
-    &--min 
-        margin-left: -6px
-        margin-right: -6px
-    &--align-c
-        align-items: center
-    &--align-e
-        align-items: flex-end
-    &--stretch 
-        align-items: stretch
-    &--space-b
-        justify-content: space-between
-    &--space-a
-        justify-content: space-around
-    &--center 
-        justify-content: center
-    &--no-wrap 
-        flex-wrap: nowrap
-    &--right 
-        justify-content: flex-end
+// .row-n
+//     display: flex
+//     margin-left: -10px
+//     margin-right: -10px
+//     flex-wrap: wrap
+//     &--m 
+//         margin-left: 0
+//         margin-right: 0
+//     &--min 
+//         margin-left: -6px
+//         margin-right: -6px
+//     &--align-c
+//         align-items: center
+//     &--align-e
+//         align-items: flex-end
+//     &--stretch 
+//         align-items: stretch
+//     &--space-b
+//         justify-content: space-between
+//     &--space-a
+//         justify-content: space-around
+//     &--center 
+//         justify-content: center
+//     &--no-wrap 
+//         flex-wrap: nowrap
+//     &--right 
+//         justify-content: flex-end
         
 
-.cols 
-    padding: 0 10px
-    &--min 
-        padding: 0 6px
+// .cols 
+//     padding: 0 10px
+//     &--min 
+//         padding: 0 6px
 
-@for $i from 1 through 12
-    .cols-#{$i}
-        width: math.div($i * 100%, 12)
+// @for $i from 1 through 12
+//     .cols-#{$i}
+//         width: math.div($i * 100%, 12)
 
-.hide 
-    display: none !important
+// .hide 
+//     display: none !important
 
-.show 
-    display: block !important
+// .show 
+//     display: block !important
 
 
-@media (max-width: 1200px)
-    @for $i from 1 through 12
-        .cols-lg-#{$i}
-            width: math.div($i * 100%, 12)
-    @for $i from 1 through 12
-        .order-lg-#{$i}
-            order: $i 
+// @media (max-width: 1200px)
+//     @for $i from 1 through 12
+//         .cols-lg-#{$i}
+//             width: math.div($i * 100%, 12)
+//     @for $i from 1 through 12
+//         .order-lg-#{$i}
+//             order: $i 
 
-    .hide-lg
-        display: none !important
-    .show-lg
-        display: block !important
+//     .hide-lg
+//         display: none !important
+//     .show-lg
+//         display: block !important
 
-@media (max-width: 991px)
-    @for $i from 1 through 12
-        .cols-md-#{$i}
-            width: math.div($i * 100%, 12)
-    @for $i from 1 through 12
-        .order-md-#{$i}
-            order: $i 
+// @media (max-width: 991px)
+//     @for $i from 1 through 12
+//         .cols-md-#{$i}
+//             width: math.div($i * 100%, 12)
+//     @for $i from 1 through 12
+//         .order-md-#{$i}
+//             order: $i 
 
-    .row--md-reverse 
-        flex-direction: column-reverse
-    .hide-md 
-        display: none !important
-    .show-md
-        display: block !important
+//     .row--md-reverse 
+//         flex-direction: column-reverse
+//     .hide-md 
+//         display: none !important
+//     .show-md
+//         display: block !important
 
-@media (max-width: 768px)
-    .row 
-        margin-left: -10px
-        margin-right: -10px
+// @media (max-width: 768px)
+//     .row 
+//         margin-left: -10px
+//         margin-right: -10px
         
-    .cols 
-        padding: 0 10px 
+//     .cols 
+//         padding: 0 10px 
 
-    @for $i from 1 through 12
-        .cols-sm-#{$i}
-            width: math.div($i * 100%, 12)
+//     @for $i from 1 through 12
+//         .cols-sm-#{$i}
+//             width: math.div($i * 100%, 12)
 
-    @for $i from 1 through 12
-        .order-sm-#{$i}
-            order: $i 
+//     @for $i from 1 through 12
+//         .order-sm-#{$i}
+//             order: $i 
             
-    .hide-sm 
-        display: none !important
-    .show-sm
-        display: block !important
+//     .hide-sm 
+//         display: none !important
+//     .show-sm
+//         display: block !important
 
-@media (max-width: 576px)
-    @for $i from 1 through 12
-        .cols-xs-#{$i}
-            width: math.div($i * 100%, 12)
+// @media (max-width: 576px)
+//     @for $i from 1 through 12
+//         .cols-xs-#{$i}
+//             width: math.div($i * 100%, 12)
 
-    @for $i from 1 through 12
-        .order-xs-#{$i}
-            order: $i 
+//     @for $i from 1 through 12
+//         .order-xs-#{$i}
+//             order: $i 
 
-    .hide-xs
-        display: none !important
-    .show-xs
-        display: block !important
+//     .hide-xs
+//         display: none !important
+//     .show-xs
+//         display: block !important

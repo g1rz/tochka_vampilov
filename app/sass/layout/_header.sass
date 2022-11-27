@@ -1,0 +1,27 @@
+.header 
+    background: $bgDark
+
+.header-top 
+    position: relative
+
+.header-main 
+    display: grid 
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-areas: "a b c c d" "a e e e e"
+    padding: 97px 0
+
+    &__logo 
+        grid-area: a 
+
+    &__social 
+        grid-area: b
+
+    &__line 
+        grid-area: c
+
+    &__eye 
+        grid-area: d
+
+    &__nav 
+        grid-area: e

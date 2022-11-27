@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "Bitter";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/bitter/Bitter-Light.woff2") format("woff2"), url("../fonts/bitter/Bitter-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Bitter";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/bitter/Bitter-Regular.woff2") format("woff2"), url("../fonts/bitter/Bitter-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Bitter";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/bitter/Bitter-Medium.woff2") format("woff2"), url("../fonts/bitter/Bitter-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Bitter";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/bitter/Bitter-SemiBold.woff2") format("woff2"), url("../fonts/bitter/Bitter-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Bitter";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/bitter/Bitter-Bold.woff2") format("woff2"), url("../fonts/bitter/Bitter-Bold.woff") format("woff");
+}
+.container {
+  max-width: 1345px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 769px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1345px;
+  }
+}
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100%;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Bitter", sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  background: #F3F5FA;
+}
+
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+input, button, textarea {
+  font-family: "Bitter", sans-serif;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+button {
+  background: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ul {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p {
+  margin: 12px 0;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 38px;
+  letter-spacing: -1px;
+  font-family: "Bitter", sans-serif;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  font-family: "Bitter", sans-serif;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Bitter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  text-decoration: none;
+}
+
+body.overflow {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-content {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.section {
+  padding: 30px 0 40px;
+}
+.section--min {
+  padding: 10px 0 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.fix {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-animation: fadeInUp 0.5s ease;
+          animation: fadeInUp 0.5s ease;
+}
+
+#top {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  z-index: 50;
+}
+#top svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+.map-wrap {
+  position: relative;
+  height: 100%;
+}
+.map-wrap iframe {
+  border: none;
+  height: 100%;
+  min-height: 500px;
+  width: 100%;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.columns-2 {
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.columns-2 p {
+  margin-top: 0;
+}
+
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
