@@ -29,7 +29,7 @@
   src: url("../fonts/bitter/Bitter-Bold.woff2") format("woff2"), url("../fonts/bitter/Bitter-Bold.woff") format("woff");
 }
 .container {
-  max-width: 1345px;
+  max-width: 1375px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -51,7 +51,7 @@
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1345px;
+    max-width: 1375px;
   }
 }
 html {
@@ -74,7 +74,6 @@ body {
   font-weight: 400;
   font-size: 17px;
   line-height: 20px;
-  background: #F3F5FA;
 }
 
 a[href^="tel:"] {
@@ -231,7 +230,9 @@ body {
 }
 
 .test {
-  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid red;
 }
 
 .map-wrap {
@@ -338,5 +339,88 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+.langs-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.langs-toggle__link {
+  position: relative;
+  display: block;
+  padding: 8px 10px;
+  min-width: 52px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  background: #746B60;
+  text-align: center;
+}
+.langs-toggle__link.is-active {
+  background: #fff;
+  color: #000;
+}
+.langs-toggle__link.is-active::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-top: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #fff;
+}
+
+.header {
+  background: #EAE3D3;
+}
+
+.header-top {
+  position: relative;
+}
+
+.header-main {
+  display: grid;
+  grid-template-columns: 350px auto 1fr auto;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "a b c d" "a e e e";
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  padding: 97px 0;
+  gap: 40px;
+}
+.header-main__logo {
+  grid-area: a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.header-main__social {
+  grid-area: b;
+}
+.header-main__line {
+  grid-area: c;
+}
+.header-main__eye {
+  grid-area: d;
+}
+.header-main__nav {
+  grid-area: e;
+}
+
+.logo {
+  display: block;
+}
+.logo__img {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

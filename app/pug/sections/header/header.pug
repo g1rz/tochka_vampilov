@@ -1,3 +1,46 @@
+-
+    var socialList = [
+        {
+            label: 'Ссылка на youtube',
+            icon: './img/sprite.svg#icon-youtube'
+        }, {
+            label: 'Ссылка на vk',
+            icon: './img/sprite.svg#icon-vk'
+        }, {
+            label: 'Ссылка на rutube',
+            icon: './img/sprite.svg#icon-rutube'
+        }, {
+            label: 'Ссылка на ok',
+            icon: './img/sprite.svg#icon-ok'
+        }
+    ]
+
+    var mainMenu =  {
+        classMenu: 'main-menu',
+        classMenuItem: 'main-menu__item',
+        classMenuLink: 'main-menu__link',
+        items: [
+            {
+                name: 'новости',
+                link: '#'
+            }, {
+                name: 'о вампилове',
+                link: '#'
+            }, {
+                name: 'о кульурном центре',
+                link: '#'
+            }, {
+                name: 'афиша',
+                link: '#'
+            }, {
+                name: 'контакты',
+                link: '#'
+            } 
+        ]};
+
+include ../../components/_menu
+
+
 header.header 
     .container 
         .header-top 
@@ -7,13 +50,32 @@ header.header
                 a.langs-toggle__link(href="#")
                     | eng
         .header-main 
-            .header-main__logo 
-                .test test
-            .header-main__social 
-                .test test
-            .header-main__line 
-                .test test
-            .header-main__eye 
-                .test test
-            .header-main__nav
-                .test test
+            .header-main__left 
+                a.logo(href="#")
+                    //- | logo
+                    img.logo__img(src="./img/logo.svg")
+
+            .header-main__right
+                .header-main__right-top
+                    .social-list 
+                        each item in socialList
+                            a.social-list__link(href="#", aria-label=item.label)
+                                svg.social-list__link-svg 
+                                    use(xlink:href=item.icon)
+
+                    .header-line-dotted
+                        
+                    
+                    a.eye-toggle(href="#")
+                        svg.eye-toggle__icon 
+                            use(xlink:href="./img/sprite.svg#eye")
+                        span Версия для слабовидящих
+
+                .header-main__right-bottom
+                    nav.main-menu-nav 
+                        +menu(mainMenu)
+
+                    .header-search 
+                        button.header-search__btn(aria-label="Поиск")
+                            svg 
+                                use(xlink:href="./img/sprite.svg#search")

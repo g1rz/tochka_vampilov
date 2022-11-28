@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Заголовок</title>
+    <meta name="description" content="Описание">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="main-page">
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="langs-toggle"> <a class="langs-toggle__link is-active" href="#">рус</a><a class="langs-toggle__link" href="#">eng</a></div>
+            </div>
+            <div class="header-main">
+                <div class="header-main__logo test"> <a class="logo" href="#"><img class="logo__img" src="./img/logo.svg"></a></div>
+                <div class="header-main__social">
+                    <div class="test">test</div>
+                </div>
+                <div class="header-main__line">
+                    <div class="test">test</div>
+                </div>
+                <div class="header-main__eye">
+                    <div class="test">test</div>
+                </div>
+                <div class="header-main__nav">
+                    <div class="test">test</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+    </main>
+    <div class="modal mfp-hide" id="callback">
+        <p class="modal__title">
+            Обратная связь</p>
+        <form class="form">
+            <input type="hidden" name="act" value="callback">
+            <div class="f-group">
+                <input class="f-input" placeholder="Имя" name="user_name">
+            </div>
+            <div class="f-group">
+                <input class="f-input phone-mask" placeholder="Телефон*" name="user_phone" required>
+            </div>
+            <div class="f-group">
+                <textarea class="f-textarea" placeholder="Комментарий" name="user_comment"></textarea>
+            </div>
+            <div class="f-group">
+                <label class="check">
+                    <input class="check__input" type="checkbox" name="pdn" id="pdn_m" required><span class="check__label">
+                        Я соглашаюсь на обработку моих
+                        <a href="#">персональных данных</a> </span>
+                </label>
+            </div>
+            <button class="btn btn--active btn--block" type="submit">Отправить</button>
+        </form>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
