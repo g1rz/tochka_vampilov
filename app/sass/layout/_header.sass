@@ -122,3 +122,36 @@
             stroke: $blackHeader
             stroke-width: 2px
             transition: stroke 0.3s ease
+
+
+@media (max-width: 1200px)
+    .header-main
+        &__left
+            width: 300px
+        &__right 
+            width: calc(100% - 300px)
+
+    .header-search
+        margin-left: 20px
+
+    .main-menu
+        &__link 
+            font-size: 14px
+// max-width: 1200px
+
+@media (max-width: 991px)
+    .main-menu-nav
+        display: none 
+
+    .header-search
+        display: none
+
+    .header-line-dotted
+        display: none
+
+    .header-main
+        &__right-bottom
+            margin-top: 0
+
+    
+// max-width: 991px
