@@ -1,0 +1,124 @@
+-
+    var introSlider = [
+        {
+            imageUrl: './img/intro/slide-1.jpg',
+            title: '«На антресолях…»',
+            text: '<p>Тема постоянной экспозиции – жизнь и творчество Александра Вампилова, выдающегося драматурга. Более 120 экспонатов: личные вещи Вампилова, предметы, связанные с эпохой 1960-х, а также с историей театра и Иркутска.</p>',
+            link: '#'
+        }, {
+            imageUrl: './img/intro/slide-2.jpg',
+            title: 'Картинная галерея',
+            text: '<p>Включает актуальные течения ХХ и XXI века.</p><p>Художественная коллекция содержит более 200 работ: живопись, графика и декоративно-прикладное искусство. Формируется с 1996 года. <a href="#">подробнее →</a></p>',
+            link: '#'
+        }, {
+            imageUrl: './img/intro/slide-3.jpg',
+            title: 'Библиотека',
+            text: '<p>На полках – книги на вампиловскую тематику. Самые ценные сборники материалов и статей о жизни и творчестве мирового драматурга. А также художественная проза, книги по истории театра, филологии, краеведению.</p>',
+            link: '#'
+        }, {
+            imageUrl: './img/intro/slide-4.jpg',
+            title: 'Литературно-театральный салон',
+            text: '<p>Регулярно устраиваем творческие вечера, представления и презентации. Вы можете провести свое мероприятие в салоне. Мы посодействуем вам в организации культурного, научного или познавательно-развлекательного события.</p>',
+            link: '#'
+        }
+    ]
+
+
+section.intro 
+    .intro-slider-big.swiper 
+
+        .container.container--relative
+            .intro-slider-dots
+        
+        .swiper-wrapper
+            each item in introSlider
+                .intro-slider-big__item.swiper-slide
+                    .intro-slider-big__image(style="background-image: url(" + item.imageUrl + ")")
+                    .container 
+                        .intro-slider-big__inner 
+                            p.intro-slider-big__title 
+                                | !{item.title}
+        
+        // .swiper-wrapper
+
+        .intro-slider-buttons 
+            .container.container--relative 
+                button.intro-slider-button.intro-slider-button--prev.js-intro-prev
+                button.intro-slider-button.intro-slider-button--next.js-intro-next
+    // .intro-slider-big
+
+    .intro-bottom 
+        .container 
+            .intro-bottom__row
+                .intro-bottom__col.intro-bottom__col--slider
+                    .intro-slider-min.swiper    
+                        .swiper-wrapper
+                            each item in introSlider
+                                .intro-slider-min__item.swiper-slide
+                                    .intro-slider-min__wrapper
+                                        .intro-slider-min__inner
+                                            | !{item.text}
+                                            a.intro-slider-min__btn.btn.btn--light(href=item.link)
+                                                span подробнее 
+                                                svg 
+                                                    use(xlink:href="./img/sprite.svg#arrow-right")
+                            
+
+                .intro-bottom__col
+                    p С любовью рассказываем об Александре Вампилове и искусстве. Проводим творческие встречи, организуем спектакли, выставки
+
+                    a.btn.btn--active(href="#")
+                        span купить билеты 
+                        svg 
+                            use(xlink:href="./img/sprite.svg#arrow-right")
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+             

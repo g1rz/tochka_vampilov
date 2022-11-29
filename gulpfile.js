@@ -51,7 +51,7 @@ const sass = () => {
 const scripts_libs = () => {
     return gulp.src('app/js/vendors/*.js')
 		.pipe(concat('libs.min.js'))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest('app/js'))
         .pipe(browserSync.stream());
 }
