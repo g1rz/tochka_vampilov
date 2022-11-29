@@ -49,33 +49,47 @@ header.header
                     | рус
                 a.langs-toggle__link(href="#")
                     | eng
+
+            .header-top-menu 
+                button.header-top-menu__link.js-open-menu(aria-label="Открыть меню")
+                    svg 
+                        use(xlink:href="./img/sprite.svg#burger")
+            
+                button.header-top-menu__link(aria-label="Открыть поиск")
+                    svg 
+                        use(xlink:href="./img/sprite.svg#search")
+
+                a.header-top-menu__link(href="#", aria-label="Обратный звонок")
+                    svg 
+                        use(xlink:href="./img/sprite.svg#phone")
+            
         .header-main 
-            .header-main__left 
+            .header-main__logo
                 a.logo(href="#")
                     //- | logo
                     img.logo__img(src="./img/logo.svg")
 
-            .header-main__right
-                .header-main__right-top
-                    .social-list 
-                        each item in socialList
-                            a.social-list__link(href="#", aria-label=item.label)
-                                svg.social-list__link-svg 
-                                    use(xlink:href=item.icon)
-
-                    .header-line-dotted
+            .header-main__social
+                .social-list 
+                    each item in socialList
+                        a.social-list__link(href="#", aria-label=item.label)
+                            svg.social-list__link-svg 
+                                use(xlink:href=item.icon)
+            
+            .header-main__line
+                .header-line-dotted
                         
-                    
-                    a.eye-toggle(href="#")
-                        svg.eye-toggle__icon 
-                            use(xlink:href="./img/sprite.svg#eye")
-                        span Версия для слабовидящих
+            .header-main__eye
+                a.eye-toggle(href="#")
+                    svg.eye-toggle__icon 
+                        use(xlink:href="./img/sprite.svg#eye")
+                    span Версия для слабовидящих
 
-                .header-main__right-bottom
-                    nav.main-menu-nav 
-                        +menu(mainMenu)
+            .header-main__nav
+                nav.main-menu-nav 
+                    +menu(mainMenu)
 
-                    .header-search 
-                        button.header-search__btn(aria-label="Поиск")
-                            svg 
-                                use(xlink:href="./img/sprite.svg#search")
+                .header-search 
+                    button.header-search__btn(aria-label="Поиск")
+                        svg 
+                            use(xlink:href="./img/sprite.svg#search")
