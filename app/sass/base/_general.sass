@@ -86,6 +86,14 @@ body.overflow
 body 
     display: flex 
     flex-direction: column 
+    transition: transform 0.3s ease
+
+    &.is-open-menu 
+        transform: translateX(270px)
+
+html
+    overflow-x: hidden
+
 
 .main-content 
     flex: auto
