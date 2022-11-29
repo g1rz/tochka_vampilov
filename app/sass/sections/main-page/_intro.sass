@@ -1,6 +1,8 @@
 .intro-slider-big 
-    
+    // perspective: 1px
     overflow-y: auto
+    *
+        box-sizing: border-box
 
     &__item 
         position: relative
@@ -24,12 +26,12 @@
         bottom: 0
         left: 0
         z-index: -1
-        transform-origin: center
-        background-repeat: no-repeat
-        background-size: cover
-        transition: 1s
-        /* Параллакс */
-        transform: translateZ(-1px) scale(2)
+        // transform-origin: center
+        // background-repeat: no-repeat
+        background-size: 200%
+        // transition: 1s
+        // /* Параллакс */
+        // transform: translateZ(-1px) scale(2)
 
     &__inner
         display: flex 
@@ -160,3 +162,73 @@
         position: absolute
         bottom: -30px
         left: 50px
+
+@media (max-width: 1400px)
+    .intro-slider-button 
+        &--prev 
+            left: 10px
+
+        &--next 
+            right: 10px
+
+    .intro-slider-big
+        &__inner
+            padding-left: 40px
+            padding-right: 40px
+
+@media (max-width: 1200px)
+    .intro-slider-big 
+        &__inner 
+            height: 400px
+
+    .intro-bottom
+        &__row 
+            gap: 20px
+
+@media (max-width: 991px)
+    .intro-slider-big
+        &__title 
+            font-size: 50px
+
+    .intro-bottom
+        &__row 
+            grid-template-columns: 1fr
+
+    .intro-slider-min 
+        position: static
+        margin-top: -140px
+        max-width: 100%
+
+        &__wrapper 
+            padding-bottom: 52px
+
+        &__btn 
+            left: 0
+            bottom: -52px
+
+@media (max-width: 767px)
+    .intro-slider-big
+        &__inner 
+            height: 378px
+
+        &__title 
+            font-size: 36px
+
+    .intro-slider-button
+        &--prev 
+            border-top: 9px solid transparent
+            border-right: 18px solid #fff
+            border-bottom: 9px solid transparent
+
+        &--next 
+            border-top: 9px solid transparent
+            border-bottom: 9px solid transparent
+            border-left: 18px solid #fff
+
+
+    .intro-slider-min
+        &__inner 
+            padding: 30px
+
+    .intro-bottom 
+        font-size: 16px

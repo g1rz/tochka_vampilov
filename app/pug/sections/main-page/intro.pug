@@ -33,7 +33,7 @@ section.intro
         .swiper-wrapper
             each item in introSlider
                 .intro-slider-big__item.swiper-slide
-                    .intro-slider-big__image(style="background-image: url(" + item.imageUrl + ")")
+                    .intro-slider-big__image.parallax(style="background-image: url(" + item.imageUrl + ")", data-speed="1")
                     .container 
                         .intro-slider-big__inner 
                             p.intro-slider-big__title 
