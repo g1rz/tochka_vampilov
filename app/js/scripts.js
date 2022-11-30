@@ -41,42 +41,18 @@ $(document).ready(function () {
 });
 
 $(function () {
-    // window.addEventListener('scroll', function (event) {
-    //     var top = this.pageYOffset;
+    window.addEventListener('scroll', function (event) {
+        var top = this.pageYOffset;
 
-    //     var layers = $('.parallax');
-    //     var speed, yPos;
-    //     layers.each(function () {
-    //         speed = $(this).attr('data-speed');
-    //         var yPos = -((top * speed) / 100);
-    //         $(this).attr('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-    //     });
-    // });
-
-    var paralax = document.querySelector('.parallax');
-    var layers = $('.parallax');
-
-    /* коэфициент сдвига: 1 сдвиг равный смещению по оси Y, 0 без сдвига */
-    var moveCoef = 0.5;
-
-    window.addEventListener('scroll', scroll);
-    window.addEventListener('resize', scroll);
-    scroll();
-
-    function scroll() {
-        /* берём огнаничивающий прямоугольник паралакса относительно окна (фрейма) */
-        var r = paralax.getBoundingClientRect();
-
-        /* центр паралакса */
-        var paralaxYCenter = r.y + r.height / 2;
-        /* центр экрана */
-        var scrollYCenter = window.innerHeight / 2;
-
-        /* Вычисляем смещение */
-        var move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
-
-        paralax.style.backgroundPositionY = move + 'px';
-    }
+        var layers = $('.parallax__layer');
+        var speed, yPos;
+        layers.each(function () {
+            speed = $(this).attr('data-speed');
+            var yPos = -((top * speed) / 100);
+           
+            this.style.transform = 'translate3d(0px, ' + yPos + 'px, 0px)';
+        });
+    });
 });
 
 function setSlideHeight(that) {
